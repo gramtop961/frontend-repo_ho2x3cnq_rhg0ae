@@ -3,7 +3,7 @@ import { Menu, X, ChevronDown, CreditCard, BookOpen, CircleUserRound } from 'luc
 
 const navItems = [
   { label: 'Home', href: '#home' },
-  { label: 'About Us', href: '#about' },
+  { label: 'About Us', href: '#about-us' },
 ];
 
 const franchiseItems = [
@@ -51,7 +51,7 @@ export default function Navbar() {
             <a href="#blog" className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-900">
               <BookOpen className="h-4 w-4" /> Blog
             </a>
-            <a href="#apply" className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 shadow-sm hover:shadow-md transition-shadow">
+            <a href="#apply" className="inline-flex items-center gap-2 rounded-lg bg-yellow-400 text-slate-900 px-4 py-2 shadow-sm hover:bg-yellow-500 transition-colors">
               <CircleUserRound className="h-4 w-4" /> Apply Now
             </a>
           </nav>
@@ -85,7 +85,7 @@ export default function Navbar() {
               <a href="#blog" className="px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-700" onClick={() => setOpen(false)}>
                 Blog
               </a>
-              <a href="#apply" className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-4 py-2 shadow-sm">
+              <a href="#apply" className="inline-flex items-center justify-center gap-2 rounded-lg bg-yellow-400 text-slate-900 px-4 py-2 shadow-sm hover:bg-yellow-500" onClick={() => setOpen(false)}>
                 Apply Now
               </a>
             </div>

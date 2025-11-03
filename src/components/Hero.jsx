@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
 import Spline from '@splinetool/react-spline';
-import { ShieldCheck, TrendingUp, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="home" className="relative">
+    <section className="relative">
       <div className="relative h-[620px] w-full overflow-hidden rounded-b-[2rem] bg-gradient-to-br from-sky-50 via-white to-indigo-50">
         <div className="absolute inset-0">
-          <Spline scene="https://prod.spline.design/41MGRk-UDPKO-l6W/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+          <Spline scene="https://prod.spline.design/IKzHtP5ThSO83edK/scene.splinecode" style={{ width: '100%', height: '100%' }} />
         </div>
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/70 via-white/20 to-white/80" />
 
@@ -20,7 +20,7 @@ export default function Hero() {
                 transition={{ duration: 0.7 }}
                 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900"
               >
-                Start your ATM business with confidence
+                Build a future‑ready ATM business
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -28,7 +28,7 @@ export default function Hero() {
                 transition={{ duration: 0.9, delay: 0.1 }}
                 className="mt-4 text-base sm:text-lg text-slate-600 max-w-xl"
               >
-                Partner with trusted White Label ATM (WLA) operators in India. Simple, transparent and future‑ready — built for aspiring entrepreneurs.
+                Partner with trusted White Label ATM operators in India. Transparent onboarding, smart site selection, and steady returns.
               </motion.p>
 
               <motion.div
@@ -37,18 +37,13 @@ export default function Hero() {
                 transition={{ duration: 0.9, delay: 0.2 }}
                 className="mt-8 flex flex-wrap items-center gap-3"
               >
-                <a href="#apply" className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-3 shadow-lg hover:shadow-xl transition-shadow">
+                <a href="#apply" className="inline-flex items-center gap-2 rounded-xl bg-yellow-400 text-slate-900 px-5 py-3 shadow-lg hover:bg-yellow-500 transition-colors">
                   Apply Now <ArrowRight className="h-4 w-4" />
                 </a>
-                <a href="#about" className="inline-flex items-center gap-2 rounded-xl bg-white text-slate-800 px-5 py-3 border border-slate-200 shadow-sm hover:shadow transition-all">
+                <a href="#about-us" className="inline-flex items-center gap-2 rounded-xl bg-white text-slate-800 px-5 py-3 border border-slate-200 shadow-sm hover:shadow transition-all">
                   Learn More
                 </a>
               </motion.div>
-
-              <div className="mt-8 grid sm:grid-cols-2 gap-4">
-                <Feature icon={<ShieldCheck className="h-5 w-5 text-blue-600" />} title="Verified partners" desc="Work only with RBI‑compliant WLA operators" />
-                <Feature icon={<TrendingUp className="h-5 w-5 text-indigo-600" />} title="Smart returns" desc="Proven model with steady monthly income" />
-              </div>
             </div>
 
             <motion.div
@@ -69,19 +64,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  );
-}
-
-function Feature({ icon, title, desc }) {
-  return (
-    <div className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-      <div className="h-9 w-9 rounded-xl bg-slate-50 grid place-content-center">
-        {icon}
-      </div>
-      <div>
-        <p className="font-medium text-slate-900">{title}</p>
-        <p className="text-sm text-slate-600">{desc}</p>
-      </div>
-    </div>
   );
 }
